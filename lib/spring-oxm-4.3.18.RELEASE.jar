@@ -1,0 +1,151 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>页面已拦截</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+</head>
+<body>
+
+<div class="top-1">
+
+</div>
+
+
+<div class="top-2">
+    <span>
+        包头警方<span>提醒您：</span>
+    </span>
+</div>
+
+
+<div class="banaer">
+    <div class="con"  id="container">
+        <p class="war">您访问的网站存在风险！</p>
+        <p class="mas-p-1">
+            您正在访问
+            <span id="span-url">http://120.52.51.15/central.maven.org/maven2/org/springframework/spring-oxm/4.3.18.RELEASE/spring-oxm-4.3.18.RELEASE.jar</span>
+        </p>
+        <p class="msg">您要访问的网站存在风险，建议您谨慎访问！</p>
+
+        <p class="msg">如有疑问可致电包头市公安局报警电话
+            <strong>110</strong>咨询
+        </p>
+        <div class="btns " style="overflow: hidden">
+            <div class="btn" id="close">关闭页面</div>
+
+           <!-- <div id="skip-box" dis="1" class="btn">
+                <a id="skip"  style="font-size: 18px;padding: 0px">继续访问(不推荐)</a>
+            </div>-->
+
+            <div id="appeal" style="width: 100px;text-decoration:underline;font-size:19px;float: left;;margin-right: 100px;margin-top:3px;cursor: pointer;" class="">
+                <a style="font-size: 18px;padding: 0px">站长申诉</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="pic-police"></div>
+
+
+</div>
+
+<script>
+        var _mtac = {};
+        (function() {
+            var mta = document.createElement("script");
+            mta.src = "https://pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "500524858");
+            mta.setAttribute("cid", "500524861");
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        function mycount_add_count(stype){
+              var img=new Image();
+              var path='';
+              if (window.location.search == "")
+                path = window.parent.location.search;
+              else
+                path = window.location.search;
+              
+              img.src="/taste.gif"+path+'&stype='+stype+'&_t='+(new Date().getTime());
+              var bodyed = document.getElementsByTagName("body");
+              if(bodyed.length){
+                img.style.display="none";
+                    bodyed[0].appendChild(img);
+              }
+        }
+    </script>
+    <script type="text/javascript">
+        var close     = document.getElementById('close');
+        var skip      = document.getElementById('skip');
+        var appeal    = document.getElementById('appeal');
+        var token     = "5a1fc90e7a86d0f4" || '';
+        var msg       = "";
+        var url       = "http://120.52.51.15/central.maven.org/maven2/org/springframework/spring-oxm/4.3.18.RELEASE/spring-oxm-4.3.18.RELEASE.jar";
+        var c         = "259";
+        var a         = "103";
+        var pUrl      = url ? '?url=' + encodeURI(url) + '&src=2' : '?src=2';
+        var isBan     = "0";
+        var isDelay   = "0";
+
+
+        close.addEventListener('click', function(){
+            MtaH5.clickStat("closepage")
+            mycount_add_count(6)
+             setTimeout(function() {
+                try {
+                    window.close();
+                } catch (e) {
+                    window.location.href="about:blank";
+                }
+            }, 100)
+           
+        })
+        skip.addEventListener('click', function(){
+            MtaH5.clickStat("continuevisit")
+            mycount_add_count(7)
+            var separate = '?';
+            if ( url.match(/\?/) ) {
+                separate = '&';
+            }
+            if (isDelay === 1) {
+                var i = 3
+                var box = document.getElementById('skip-box')
+                var msg = document.createElement('span')
+                msg.innerHTML = '倒计时' + i + '秒'
+                box.appendChild(msg)
+                var interval = setInterval(function() {
+                    i--
+                    msg.innerHTML = '倒计时' + i + '秒'
+                    if (i === 0) {
+                        window.open(url + separate + 'FbmNv=' + token , '_self')
+                        clearInterval(interval)
+                    }
+                }, 1000)
+            } else {
+                window.open(url + separate + 'FbmNv=' + token , '_self')
+            }
+        })
+        appeal.addEventListener('click', function(){
+            MtaH5.clickStat("toappeal")
+            mycount_add_count(8)
+            window.location.href='https://guanjia.qq.com/online_server/complain_url.html';
+            // window.location.href='/complain.html?url=http%3A%2F%2F120.52.51.15%2Fcentral.maven.org%2Fmaven2%2Forg%2Fspringframework%2Fspring-oxm%2F4.3.18.RELEASE%2Fspring-oxm-4.3.18.RELEASE.jar';
+        })
+
+      
+
+        // 禁止继续访问
+        if (isBan === '1') {
+            document.getElementById('skip').style.display = 'none'
+        }
+        if(document.getElementById('skip-box').getAttribute('dis') !=1){
+            var idObject =  document.getElementById('skip-box')
+            idObject.parentNode.removeChild(idObject);
+        }
+    </script>
+
+
+</body></html>
