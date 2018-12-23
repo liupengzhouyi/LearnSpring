@@ -10,7 +10,7 @@
   <head>
     <title>$Title$</title>
   </head>
-  <body>
-  $END$
+  <body style="text-align: center">
+  欢迎使用Spring
   </body>
 </html>
