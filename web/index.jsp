@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body style="text-align: center">
-  欢迎使用Spring
+    欢迎使用Spring
   </body>
 </html>
