@@ -3,6 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--代替工厂模式-->
     <bean id="man" class="FactoryExample.Man"/>
     <bean id="women" class="FactoryExample.Women"/>
+
+    <!--注入方式：设置注入-->
+    <bean id="chinese" class="Injection.Chinese">
+        <property name="language" ref="english"></property>
+    </bean>
+    <bean id="english" class="Injection.English"/>
+
+    <bean id="australia" class="Injection.Australia">
+        <!--使用构造注入，为australlia注入language实例-->
+        <constructor-arg ref="english"></constructor-arg>
+    </bean>
+
 </beans>
