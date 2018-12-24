@@ -12,5 +12,11 @@
   </head>
   <body style="text-align: center">
     欢迎使用Spring
+
+    <h1>hello</h1>
+    This is my JSP page. <br>
+    <!-- ServletContext == application -->
+    在线人数：<%=application.getAttribute("count") %><br/>
+
   </body>
 </html>

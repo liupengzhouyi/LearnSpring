@@ -1,4 +1,4 @@
-package Proxy.DynamicProxy;
+package Proxy.DynamicProxy.OtherTest;
 
 /**
  * 创建Person接口

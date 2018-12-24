@@ -1,4 +1,6 @@
-package Proxy.DynamicProxy;
+package Proxy.DynamicProxy.OtherTest;
+
+import Proxy.DynamicProxy.OtherTest.MonitorUtil;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

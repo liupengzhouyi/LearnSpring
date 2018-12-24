@@ -1,4 +1,4 @@
-package Proxy.DynamicProxy;
+package Proxy.DynamicProxy.OtherTest;
 
 public class MonitorUtil {
     private static ThreadLocal<Long> tl = new ThreadLocal<>();

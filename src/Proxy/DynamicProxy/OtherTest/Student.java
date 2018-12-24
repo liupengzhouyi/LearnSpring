@@ -1,4 +1,6 @@
-package Proxy.DynamicProxy;
+package Proxy.DynamicProxy.OtherTest;
+
+import Proxy.DynamicProxy.OtherTest.Person;
 
 public class Student implements Person {
     private String name;
