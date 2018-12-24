@@ -11,6 +11,13 @@ public class Test {
         Human human = (Human) fileSystemXmlApplicationContext.getBean("chinese");
 
         human.speak();
+
+        Human human1 = (Human) fileSystemXmlApplicationContext.getBean("chinese");
+
+        System.out.println(human.equals(human1));
+
+        System.out.println(human);
+        System.out.println(human1);
     }
 
 }

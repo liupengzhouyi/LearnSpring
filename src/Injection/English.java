@@ -5,4 +5,12 @@ public class English implements Language {
     public String kind() {
         return " can speak English!";
     }
+
+    public void init(){
+
+    }
+
+    public void close() {
+
+    }
 }

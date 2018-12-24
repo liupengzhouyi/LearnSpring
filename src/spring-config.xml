@@ -8,7 +8,7 @@
     <bean id="women" class="FactoryExample.Women"/>
 
     <!--注入方式：设置注入-->
-    <bean id="chinese" class="Injection.Chinese">
+    <bean id="chinese" class="Injection.Chinese" scope="prototype">
         <property name="language" ref="english"></property>
     </bean>
     <bean id="english" class="Injection.English"/>
@@ -17,5 +17,13 @@
         <!--使用构造注入，为australlia注入language实例-->
         <constructor-arg ref="english"></constructor-arg>
     </bean>
+
+    <bean id="dome" class="Injection.English"
+          init-method="init"
+          destroy-method="close">
+        <!--//当Bean 被载入容器时候调用 init() 方法
+        //当Bean 被从容器中删除的时候，调用close方法-->
+    </bean>
+
 
 </beans>
