@@ -1,6 +1,5 @@
 package FactoryExample;
 
-import org.apache.catalina.core.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class SrpingTest {
